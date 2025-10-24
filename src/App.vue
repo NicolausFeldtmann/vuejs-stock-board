@@ -18,19 +18,43 @@
 
     </div>
 
+    <div class="middleSection">
+      <CourseBoard>
+        
+      </CourseBoard>
+
+      <RevBreakDown>
+
+      </RevBreakDown>
+    </div>
+
+    <div class="bottomSection">
+      <NetIncome></NetIncome>
+      <GrossMargin></GrossMargin>
+    </div>
+
   </div>
 
 </template>
 
 <script>
 import BaseCard from './components/BaseCard.vue';
+import CourseBoard from './components/CourseBoard.vue';
+import GrossMargin from './components/GrossMargin.vue';
+import NetIncome from './components/NetIncome.vue';
+import RevBreakDown from './components/RevBreakDown.vue';
+
 //import { stockService } from './services/stockService';
 import { stockConfig } from './services/stockConfig';
 
 export default {
   name: 'App',
   components: {
-    BaseCard
+    BaseCard,
+    CourseBoard,
+    RevBreakDown,
+    NetIncome,
+    GrossMargin
   },
   data() {
     return {
@@ -83,6 +107,7 @@ h1{
 .content{
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -95,5 +120,10 @@ h1{
   width: 1240px;
   height: 190px;
   border-radius: 16px;
+}
+
+.middleSection{
+  display: flex;
+  flex-direction: row;
 }
 </style>
