@@ -1,6 +1,8 @@
 <template>
-    <div class="gross-contetn">
-        <h2>Gross Margin in % LQ</h2>
+    <div class="gross-content">
+        <div class="inner-gross">
+            <h3>Gross Margin in % LQ</h3>
+        </div>
     </div>
 </template>
 
@@ -11,8 +13,18 @@ export default {
 </script>
 
 <style>
-.gross-contetn{
+.gross-content{
     background-color: #011F35;
-    height: 150px;
+    height: 300px;
+    margin: 0px 24px 0px 24px;
+    border-radius: 16px;
+}
+
+.inner-gross{
+    margin: 24px 32px;
+}
+
+h3{
+    color: white;
 }
 </style>

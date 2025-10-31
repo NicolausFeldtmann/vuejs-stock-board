@@ -4,6 +4,7 @@
             <h1 class="name">{{ name }}</h1>
             <img class="logo" :src="logoPath" alt="Logo image" v-if="logoPath">
         </div>
+        <div class="subline">Revenue {{ lastQuartalRev }}</div>
         <slot></slot>
     </div>
 </template>
@@ -19,6 +20,10 @@ export default {
         logoPath: {
             type: String,
             required: true
+        },
+        lastQuartalRev: {
+            type: String,
+            required: true
         }
     },
 }
@@ -28,10 +33,9 @@ export default {
 .card{
     background-color: #011F35;
     border-radius: 16px;
-    padding: 24px 32px;
-    width: 172px;
+    width: auto;
     height: 148px;
-    margin: 0px 4px 0px 4px;
+    margin: 0px 12px 0px 12px;
 }
 
 .name{
@@ -44,10 +48,15 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 24px 32px 0px 32px;
 }
 
 .logo{
     width: 20px;
     height: 20px;
+}
+
+.subline{
+    color: white;
 }
 </style>

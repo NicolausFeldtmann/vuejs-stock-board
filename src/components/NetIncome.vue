@@ -1,6 +1,8 @@
 <template>
     <div class="netIncome-content">
-        <h2>Net Incomme TTM</h2>
+        <div class="inner-net">
+            <h3>Net Incomme TTM</h3>
+        </div>
     </div>
 </template>
 
@@ -12,7 +14,17 @@ export default {
 <style>
 .netIncome-content{
     background-color: #011F35;
-    height: 150px;
+    height: 300px;
+    width: 30%;
+    border-radius: 16px;
+}
+
+.inner-net{
+    margin: 24px 32px;
+}
+
+h3{
+    color: white;
 }
 </style>
 

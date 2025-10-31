@@ -1,6 +1,8 @@
 <template>
     <div class="beak-content">
-        <h3>RevBreakDown works</h3>
+        <div class="inner-beak">
+            <h3>Revenue Breakdown Magnificent Seven</h3>
+        </div>
     </div>
 </template>
 
@@ -12,6 +14,17 @@ export default {
 <style>
 .beak-content{
     background-color: #011F35;
-    height: 150px;
+    width: 40%;
+    height: 352px;
+    margin: 0px 0px 0px 32px;
+    border-radius: 16px;
+}
+
+.inner-beak{
+    margin: 24px 32px;
+}
+
+h3{
+    color: white;
 }
 </style>

@@ -36,7 +36,19 @@ class StockService {
 
     async getRevenue(sheetName) {
         const data = await this.fetchData(sheetName);
-        return order.map(key => data[5][key]);
+        console.log(`Data for sheet ${sheetName}:`, data);
+        const revenueData = data[2];
+        console.log(`Revenue data row for sheet ${sheetName}`)
+
+        if (!data || !Array.isArray(data) || data.length < 6) {
+            console.warn(`Unexpected data format for sheet ${sheetName}`, data);
+        }
+
+        if (typeof revenueData !== 'object') {
+            console.warn(`Expected Object format in row for ${sheetName}`, data);
+        }
+
+        return order.map(key => revenueData[key] ?? 'N/A');
     }
 }
 

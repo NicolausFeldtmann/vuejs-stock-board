@@ -1,6 +1,8 @@
 <template>
    <div class="board">
-      <h2>Revenue last 3 years</h2>
+      <div class="inner-board">
+         <h3>Revenue last 3 years</h3>
+      </div>
    </div>
 </template>
 
@@ -14,7 +16,17 @@
 
 .board{
    background-color: #011F35;
-   height: 150px;
+   height: 352px;
+   width: 60%;
+   border-radius: 16px;
+}
+
+.inner-board{
+   margin: 24px 32px;
+}
+
+h3{
+   color: white;
 }
 
 </style>
